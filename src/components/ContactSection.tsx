@@ -86,13 +86,18 @@ const ContactSection = () => {
               </div>
             </div>
 
-            {/* Map Placeholder */}
-            <div className="bg-muted rounded-xl h-64 flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="h-12 w-12 text-gold mx-auto mb-4" />
-                <p className="text-muted-foreground">Google Maps Integration</p>
-                <p className="text-sm text-muted-foreground">Visit us at our convenient location</p>
-              </div>
+            {/* Google Map */}
+            <div className="rounded-xl overflow-hidden shadow-elegant">
+              <iframe
+                title="RK Electro Hub Location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.941274737823!2d77.585!3d12.934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z12LjU2JgLCBN!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                width="100%"
+                height="256"
+                style={{ border: 0 }}
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </div>
 
