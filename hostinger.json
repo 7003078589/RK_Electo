@@ -1,0 +1,6 @@
+{
+  "type": "nodejs",
+  "buildCommand": "npm run hostinger",
+  "outputDirectory": "dist",
+  "nodeVersion": "18"
+}

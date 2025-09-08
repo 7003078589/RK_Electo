@@ -1,0 +1,11 @@
+{
+  "name": "rk-electro-hub/website",
+  "description": "RK Electro Hub - Premium Electrical Solutions Website",
+  "type": "project",
+  "require": {},
+  "scripts": {
+    "post-install-cmd": [
+      "php build.php"
+    ]
+  }
+}

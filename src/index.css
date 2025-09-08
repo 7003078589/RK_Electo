@@ -1,0 +1,211 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* RK Electro Hub Premium Design System - Light, elegant, and trendy */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    /* Premium Color Palette */
+    --background: 45 15% 97%; /* Cream/ivory background */
+    --foreground: 215 25% 27%; /* Dark navy text */
+
+    --card: 0 0% 100%; /* Pure white cards */
+    --card-foreground: 215 25% 27%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 27%;
+
+    /* Navy Blue Primary */
+    --primary: 215 50% 15%; /* Deep navy blue */
+    --primary-foreground: 45 15% 97%;
+
+    /* Warm Beige/Gold Secondary */
+    --secondary: 38 35% 85%; /* Warm beige */
+    --secondary-foreground: 215 25% 27%;
+
+    /* Gold Accent */
+    --gold: 45 90% 55%; /* Rich gold */
+    --gold-foreground: 215 50% 15%;
+
+    /* Muted tones */
+    --muted: 45 8% 92%;
+    --muted-foreground: 215 15% 45%;
+
+    --accent: 38 35% 85%;
+    --accent-foreground: 215 25% 27%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 45 15% 97%;
+
+    --border: 45 8% 88%;
+    --input: 45 8% 88%;
+    --ring: 45 90% 55%;
+
+    --radius: 0.75rem;
+
+    /* Premium Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(215 50% 15%), hsl(215 45% 25%));
+    --gradient-gold: linear-gradient(135deg, hsl(45 90% 55%), hsl(38 85% 65%));
+    --gradient-subtle: linear-gradient(180deg, hsl(45 15% 97%), hsl(45 10% 95%));
+
+    /* Premium Shadows */
+    --shadow-elegant: 0 4px 20px -4px hsl(215 50% 15% / 0.1);
+    --shadow-gold: 0 4px 20px -4px hsl(45 90% 55% / 0.2);
+    --shadow-card: 0 2px 12px -2px hsl(215 50% 15% / 0.08);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Premium Button Variants */
+  .btn-premium {
+    @apply bg-gradient-to-r from-gold to-gold-foreground text-primary-foreground px-8 py-4 rounded-lg font-semibold tracking-wide shadow-[var(--shadow-gold)] transition-[var(--transition-smooth)] hover:scale-105 hover:shadow-xl;
+  }
+
+  .btn-outline-premium {
+    @apply border-2 border-primary text-primary px-8 py-4 rounded-lg font-semibold tracking-wide bg-transparent hover:bg-primary hover:text-primary-foreground transition-[var(--transition-smooth)];
+  }
+
+  /* Premium Card */
+  .card-premium {
+    @apply bg-card rounded-xl shadow-[var(--shadow-card)] p-6 transition-[var(--transition-smooth)] hover:shadow-[var(--shadow-elegant)] hover:-translate-y-1;
+  }
+
+  /* Product Card with Gold Hover */
+  .product-card {
+    @apply bg-card rounded-xl p-6 shadow-[var(--shadow-card)] transition-[var(--transition-smooth)] hover:shadow-[var(--shadow-gold)] hover:scale-105 hover:border-gold border-2 border-transparent;
+  }
+
+  /* Section fade-in animation */
+  .fade-in {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  /* Elegant typography */
+  .heading-hero {
+    @apply text-5xl md:text-6xl font-bold text-primary leading-tight;
+  }
+
+  .heading-section {
+    @apply text-3xl md:text-4xl font-bold text-primary mb-4;
+  }
+
+  .text-premium {
+    @apply text-lg text-muted-foreground leading-relaxed;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-premium {
+    background: var(--gradient-primary);
+  }
+
+  .bg-gradient-gold {
+    background: var(--gradient-gold);
+  }
+
+  .bg-gradient-subtle {
+    background: var(--gradient-subtle);
+  }
+
+  .text-gold {
+    color: hsl(var(--gold));
+  }
+
+  .border-gold {
+    border-color: hsl(var(--gold));
+  }
+
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+
+  .shadow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
