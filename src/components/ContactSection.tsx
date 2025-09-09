@@ -90,9 +90,16 @@ const ContactSection = () => {
             <div className="rounded-xl overflow-hidden shadow-elegant">
               <iframe
                 title="RK Electro Hub Location"
-                src="https://www.google.com/maps?q=No%2079%2F32%2C%208th%20Main%20Road%2C%202nd%20Block%20Jayanagar%2C%20Bangalore%20560011&output=embed"
+                // Embed a direct Google Maps view for the exact address
+                src={
+                  "https://www.google.com/maps?q=" +
+                  encodeURIComponent(
+                    "No 79/32, 8th Main Road, 2nd Block Jayanagar, Bangalore 560011"
+                  ) +
+                  "&output=embed"
+                }
                 width="100%"
-                height="256"
+                height="360"
                 style={{ border: 0 }}
                 loading="lazy"
                 allowFullScreen
